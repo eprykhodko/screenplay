@@ -1,0 +1,19 @@
+name: screenplay
+version: '0.1.0'
+summary: screenplay
+description: Count words and phrases in TV shows
+
+grade: devel
+confinement: devmode
+
+
+parts:
+  screenplay:
+    plugin: python
+    python-version: python3
+    source: .
+    requirements: requirements.txt
+
+apps:
+  screenplay:
+    command: swc

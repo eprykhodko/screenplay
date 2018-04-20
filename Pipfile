@@ -1,0 +1,17 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+
+[requires]
+python_version = "3.6"
+
+[dev-packages]
+ipython = "*"
+
+[packages]
+aiohttp = "*"
+lxml = "*"
+termcolor = "*"
+docopt = "*"
+"e1839a8" = {path = ".", editable = true}
