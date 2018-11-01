@@ -10,7 +10,6 @@ Options:
 """
 import re
 
-import colorama
 import docopt
 
 from .crawler import gather_pages
@@ -23,5 +22,4 @@ def main():
     regex = re.compile(f'({args["<regexp>"]})', re.IGNORECASE)
 
     pages = gather_pages(show)
-    colorama.init()
     process_pages(pages, regex, args["--verbose"])
