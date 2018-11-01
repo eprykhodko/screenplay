@@ -15,7 +15,7 @@ async def crawl(show):
     async with ClientSession() as session:
         page_text = await fetch_page(INDEX_PAGE + show, session)
         tasks = [
-            asyncio.ensure_future(fetch_page(BASE_PATH + item.get('href'), session))
+            asyncio.create_task(fetch_page(BASE_PATH + item.get('href'), session))
             for item
             in html.fromstring(page_text).xpath(SEASON_EPISODES_XPATH)
         ]
