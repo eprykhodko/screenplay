@@ -19,9 +19,9 @@ from .processors import process_pages
 
 def main():
     args = docopt.docopt(__doc__)
-    show = args['<show>'].replace(' ', '-').lower()
+    show = args["<show>"].replace(" ", "-").lower()
     regex = re.compile(f'({args["<regexp>"]})', re.IGNORECASE)
 
     pages = gather_pages(show)
     colorama.init()
-    process_pages(pages, regex, args['--verbose'])
+    process_pages(pages, regex, args["--verbose"])

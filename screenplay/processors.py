@@ -5,11 +5,11 @@ from .constants import SCRIPT_CONTAINER_XPATH
 
 
 def colorize(match):
-    return colored(match.group(), 'yellow')
+    return colored(match.group(), "yellow")
 
 
 def normalize(string):
-    return ' '.join(string.split())
+    return " ".join(string.split())
 
 
 def process_pages(pages, regex, verbose):
@@ -19,9 +19,9 @@ def process_pages(pages, regex, verbose):
             sub_line, subs = regex.subn(colorize, normalize(line))
             count += subs
             if verbose and subs:
-                print('--> ', sub_line)
+                print("--> ", sub_line)
 
-    print('Total episodes:', len(pages))
-    print('Total count:', count)
+    print("Total episodes:", len(pages))
+    print("Total count:", count)
     if count is not 0:
-        print(f'Per episode, average, {count / len(pages):.4f}')
+        print(f"Per episode, average, {count / len(pages):.4f}")
