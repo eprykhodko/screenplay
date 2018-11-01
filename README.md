@@ -12,7 +12,7 @@ Options:
 
 ### Example
 
-![alt text](https://i.imgur.com/Z4MzeL6.png)
+![example_pic](https://i.imgur.com/Z4MzeL6.png)
 
 
 
@@ -22,5 +22,5 @@ Options:
 ### Run with Docker
 
 ```
-docker run eprykhodko/screenplay:latest swc 'brooklyn nine nine' 'sex tape' -v
+docker run --rm eprykhodko/screenplay:latest 'brooklyn nine nine' 'sex tape' -v
 ```
