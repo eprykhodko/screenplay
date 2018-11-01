@@ -5,7 +5,8 @@ description = "Count words in TV shows"
 authors = ["Eric Prykhodko <eprykhodko@bcdtriptech.com>"]
 
 [tool.poetry.dependencies]
-python = "3.7.0"
+python = "^3.7"
+
 aiohttp = "^3.4"
 lxml = "^4.2"
 docopt = "^0.6.2"
